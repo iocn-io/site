@@ -4,6 +4,7 @@ cd ../iocn-io.github.io
 git pull
 ls | xargs rm -rf
 cp -r ../site/public/* .
+echo "iocn.io" > CNAME
 git config user.name "iocn-io"
 git config user.email "iocn2x2y@gmail.com"
 git add .
