@@ -3,7 +3,7 @@ title: 大白话Raft
 tags: []
 categories:
   - consensus
-date: 2018-06-13 20:40:44
+date: 2018-06-14 16:39:57
 ---
 
 # 大白话Raft
