@@ -30,7 +30,7 @@ date: 2018-06-14 17:30:44
 
 - 地址的构成
 >Public Key = Gen(Private Key)
-Public Key Hash = base58( ripemd160( sha256(  ) ) )
+Public Key Hash = base58( ripemd160( sha256( Public Key ) ) )
 VerHash = Version(2bits) + Public Key Hash(20bits)
 Verify = SubStr( sha256( sha256(地址) ), 4bits)
 Addr = VerHash + Verify
@@ -67,7 +67,7 @@ Addr = VerHash + Verify
 >由于比特币采用工作量证明，两台矿机同时出块的概率虽小，但不是不存在。弱一致性的环境有可能同时产生两个块而出现软分叉。随着时间推移不停地产生新的区块，并接在最长的链条后面，所有节点只承认从创世块起最长的链条，分叉的链条将不被承认。
 
 - 工作量证明
->即常说的PoW共识机制，原理自行脑补，优势就是可以独立完成，不需要与其他节点进行交流来达成共识。
+>即常说的PoW共识机制，原理自行脑补（看懂出块速度和挖矿过程就不难理解了），优势就是可以独立完成，不需要与其他节点进行交流来达成共识。
 
 - 2100万
 >比特币是如何限制总数2100万个的呢？其实原理很简单：
