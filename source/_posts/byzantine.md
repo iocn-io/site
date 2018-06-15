@@ -1,14 +1,14 @@
 ---
 title: 拜占庭笔记
-tags: []
+tags:
+  - byzantine
 categories:
   - consensus
   - blockchain
 date: 2018-06-15 10:15:23
 ---
 
-# 拜占庭（Byzantine）笔记
-
+## 拜占庭（Byzantine）
 - 什么是拜占庭问题
 >故事可以去某度某歌找，简单的说就是在一个不可信的、叛徒数量有限的环境中大家一起作出一致的、符合初衷的决定。
 

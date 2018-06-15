@@ -1,12 +1,14 @@
 ---
 title: 大白话Raft
-tags: []
+tags:
+  - raft
 categories:
   - consensus
 date: 2018-06-14 16:39:57
 ---
 
-# 大白话Raft
+[Raft动画演示](http://thesecretlivesofdata.com/raft/)
+
 ## 角色
 - **Follower**
 >老百姓，和平时期老老实实耕地（接收来自Leader的数据，转发来自客户端的请求给Leader），动荡时期伺机造反。
@@ -34,7 +36,7 @@ date: 2018-06-14 16:39:57
 比如每个人都把票投给自己，那么共识失败。
 再比如9个节点，意见分成三大派系，各不相上下，那么共识失败。
 
-- Term（任期）
+- **Term（任期）**
 >从帝国建立时起（网络启动时）为元年，每个节点都保存Term=1。每举行一次竞选Term都要加1，表示我们竞选下一届领袖。
 比如共识失败、Leader失去心跳时、异常等情况时，Term+1后举行下一届竞选。
 当前Leader或Candidate发现自己的Term比其他Follower要小时，节点转为Follower并将自己的Term加1。
